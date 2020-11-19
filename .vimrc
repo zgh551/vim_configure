@@ -52,6 +52,9 @@ Plugin 'preservim/nerdtree'
 
 " 自动代码补全
 Plugin 'Valloric/YouCompleteMe'
+
+" the code template
+Plugin 'git@github.com:aperezdc/vim-template.git'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -171,4 +174,17 @@ nnoremap <leader>gt :YcmCompleter GoTo<CR>
 nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
 """""" 文件操作  """""
 
+" the template of file (pluge vim-template)
+let g:templates_directory = '~/.vim/templates'
+let g:templates_user_variables = [['EMAIL', 'GetMail'], ['AUTHOR', 'GetAuthor']]
+
+function GetMail()
+    return 'zgh_email@163.com'
+endfunction
+
+function GetAuthor()
+    return 'guohua zhu'
+endfunction
+
+" vim-template set end
 
