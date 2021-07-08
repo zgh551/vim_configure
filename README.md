@@ -30,7 +30,15 @@ source "/usr/share/powerline/bindings/tmux/powerline.conf"
 
 配置vim编辑器,文件位于用户根目录"~/."
 
+1. download `Vundle` plug
 
+```shell
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+2. install 
+
+open `vim`and enter `:PlugInstall`
 
 - .ycm_extra_conf.py
 
