@@ -43,9 +43,9 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'kien/ctrlp.vim'
 
 " theme
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
-Plugin 'vim-scripts/phd'
+" Plugin 'vim-scripts/phd'
 
 " nerd tree
 Plugin 'preservim/nerdtree'
@@ -188,3 +188,7 @@ endfunction
 
 " vim-template set end
 
+let g:clang_format#command = 'clang-format'
+nmap <F4> :ClangFormat<cr>
+autocmd FileType c ClangFormatAutoEnable
+let g:clang_format#detect_style_file = 1
