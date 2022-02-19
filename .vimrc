@@ -55,6 +55,10 @@ Plugin 'Valloric/YouCompleteMe'
 
 " the code template
 Plugin 'git@github.com:aperezdc/vim-template.git'
+
+" clang-format for language format
+Plugin 'rhysd/vim-clang-format'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -188,7 +192,9 @@ endfunction
 
 " vim-template set end
 
+" url: https://github.com/rhysd/vim-clang-format
 let g:clang_format#command = 'clang-format'
+let g:clang_format#code_style = "google"
+let g:clang_format#detect_style_file = 1
 nmap <F4> :ClangFormat<cr>
 autocmd FileType c ClangFormatAutoEnable
-let g:clang_format#detect_style_file = 1

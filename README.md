@@ -18,10 +18,6 @@ fi
 
 使用powerline配置terminal,文件路径"~/."
 
-2. clang
-```bash
-export PATH=/path/to/llvm-12.0.1-linux-gnu/bin:$PATH
-```
 - .tmux.conf
 
 关于`tmux`工具的配置,文件位于"~/."
@@ -43,12 +39,18 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 after this, open `vim` and enter `:PlugInstall`
 
 2. clang format
+- add to `.bashrc` file
+```bash
+export PATH=/path/to/llvm-12.0.1-linux-gnu/bin:$PATH
+```
+- configure
 ```bash
 let g:clang_format#command = 'clang-format'
 nmap <F4> :ClangFormat<cr>
 autocmd FileType c ClangFormatAutoEnable
 let g:clang_format#detect_style_file = 1
 ```
+[doc for clang format](https://github.com/rhysd/vim-clang-format)
 
 - .ycm_extra_conf.py
 
