@@ -53,9 +53,19 @@ Plugin 'rhysd/vim-clang-format'
 #### 3.3.2. configure clang format for vim
 ```bash
 let g:clang_format#command = 'clang-format'
-nmap <F4> :ClangFormat<cr>
-autocmd FileType c ClangFormatAutoEnable
+let g:clang_format#code_style = "google"
 let g:clang_format#detect_style_file = 1
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "BreakBeforeBraces" : "Stroustrup",
+            \ "AlignConsecutiveAssignments" : "true",
+            \ "AlignOperands" : "true",
+            \ "AlignTrailingComments" : "true"}
+autocmd FileType c ClangFormatAutoEnable
+nmap <F4> :ClangFormat<CR>
 ```
 [doc for clang format](https://github.com/rhysd/vim-clang-format)
 
