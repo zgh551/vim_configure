@@ -51,7 +51,7 @@ Plugin 'tomasr/molokai'
 Plugin 'preservim/nerdtree'
 
 " 自动代码补全
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " the code template
 Plugin 'git@github.com:aperezdc/vim-template.git'
@@ -136,6 +136,9 @@ colorscheme molokai     " 设置为 molokai 主题
 "colorscheme phd        “ 设置为 phd 主题
 
 "set mouse=a         " Enable the use of the mouse.
+" add space show
+set list
+set listchars=tab:>-,trail:-
 
 syntax on           " 语法高亮
 
